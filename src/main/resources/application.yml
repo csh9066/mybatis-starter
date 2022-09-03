@@ -7,4 +7,9 @@ spring:
     init:
       mode: always
 
+mybatis:
+  mapper-locations: mapper/**/*.xml
+  type-aliases-package: com.example.mybatisstarter.model
+  configuration:
+    map-underscore-to-camel-case: true
 
