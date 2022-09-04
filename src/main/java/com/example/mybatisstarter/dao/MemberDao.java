@@ -5,10 +5,17 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+import java.util.Optional;
 
 @Mapper
 public interface MemberDao {
-    Integer save(@Param("member") Member member);
+    Long save(Member member);
 
     List<Member> findAll();
+
+    Optional<Member> findById(Long id);
+
+    void remove(Long id);
+
+    void update(Member member);
 }
